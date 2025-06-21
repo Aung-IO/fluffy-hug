@@ -18,7 +18,7 @@ export default function SocialIcons() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <Image src="/assets/twitter.svg" alt="Twitter" width={48} height={48} />
+                <Image src="/assets/twitter.svg" alt="Twitter" width={40} height={40} />
             </a>
             <a
                 href="https://github.com"
