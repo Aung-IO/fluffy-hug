@@ -12,16 +12,13 @@ export default function Screen2({
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: ref });
 
-  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, -45, -90]);
+     const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-90, 0, 0]);
+        const left = useTransform(scrollYProgress, [0, 0.5, 1], ["50%", "30%", "50%"]);
+        const y = useTransform(scrollYProgress, [0, 0.5, 1], [400, 350, 470]);
+        const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.3, 1.5, 1.7]);
+    
 
-    const left = useTransform(
-        scrollYProgress,
-        [0, 0.5, 1],
-        ["50%", "30%", "50%"]
-    );
-    const y = useTransform(scrollYProgress, [0, 0.5, 1], [400, 350, 470]);
-    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.3, 1.5, 1.7]);
-
+ 
     return (
         <div>
             <motion.div

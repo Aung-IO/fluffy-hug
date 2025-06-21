@@ -9,8 +9,13 @@ export default function Screen1({ screen1Opacity }: { screen1Opacity: MotionValu
         target: ref,
     });
 
-    const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-90, 0, 0]);
-    const left = useTransform(scrollYProgress, [0, 0.5, 1], ["50%", "30%", "50%"]);
+    const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, -45, -90]);
+
+    const left = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],
+        ["50%", "30%", "50%"]
+    );
     const y = useTransform(scrollYProgress, [0, 0.5, 1], [400, 350, 470]);
     const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.3, 1.5, 1.7]);
 
@@ -21,18 +26,19 @@ export default function Screen1({ screen1Opacity }: { screen1Opacity: MotionValu
             className="absolute top-0 left-0 h-screen w-full bg-red-100 flex items-center justify-center overflow-hidden"
         >
             {/* Animated Human */}
-            <div className="sticky top-0 z-40">
+            <div className="sticky top-0 z-40 scale-[0.5] md:scale-[0.5] md:scale-100">
                 <AnimatedHuman
                     y={y}
                     rotate={rotate}
                     scale={scale}
                     left={left}
                     translateX="-50%"
-                    translateY="-112%"
+                    translateY="-120%"
                 />
             </div>
 
-             {/* logo */}
+
+            {/* logo */}
             <div className="absolute w-10/12 md:w-6/12 h-[120px] md:h-[200px] -translate-x-1/2 left-1/2 top-1/2 -translate-y-1/2">
                 <Image src="/assets/logo.webp" alt="logo" fill className="object-contain" />
             </div>
