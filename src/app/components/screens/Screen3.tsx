@@ -64,9 +64,7 @@ export default function Screen3({ screen3Opacity }: { screen3Opacity: MotionValu
         <motion.div className="absolute z-[99999] w-full md:w-3/12 h-[200px] left-[30px] top-[80%] md:-translate-y-1/2">
           <WavyText text="lorem-ipsum dollar sit amat" />
           <div className="mt-5"></div>
-          <WavyText text="lorem ipsum dollar sit amat" />
-          <div className="mt-5"></div>
-          <WavyText text="Lorem ipsum, dolor sitsss ?" />
+          
         </motion.div>
       </div>
     </motion.div>
