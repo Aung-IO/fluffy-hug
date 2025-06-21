@@ -22,7 +22,7 @@ const wordVariants: Variants = {
     y: [0, 3, 0],
     transition: {
       delay: i * 0.2,
-      type: "linear",
+      type: "tween",
       y: { repeat: Infinity, duration: 1 },
     },
   }),
