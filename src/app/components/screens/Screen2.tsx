@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import AnimatedHuman from "../AnimatedHuman";
 import Image from "next/image";
-import { div } from "framer-motion/client";
 import WavyText from "../WavyText";
 
 export default function Screen2({
@@ -13,7 +12,8 @@ export default function Screen2({
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: ref });
 
-    const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [-90, 0, 0]);
+  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [0, -45, -90]);
+
     const left = useTransform(
         scrollYProgress,
         [0, 0.5, 1],
