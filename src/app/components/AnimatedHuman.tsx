@@ -23,7 +23,7 @@ export default function AnimatedHuman({
     <div className="sticky top-0 z-50">
       <motion.div
         transition={{
-          type: "linear",
+          ease: "linear",
           repeat: Infinity,
           duration: 1,
         }}
